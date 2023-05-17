@@ -1,2 +1,4 @@
   -- 
-  Cria-se primeiro a base do HTML, h1, img, p, e cria-se uma div para esssa primeira parte
+  Aula2- Cria-se primeiro a base do HTML, h1, img, p, e cria-se uma div para esssa primeira parte
+
+  Aula3- Cria-se o styles.css, 
