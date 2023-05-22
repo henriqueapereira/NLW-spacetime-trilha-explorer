@@ -1,4 +1,131 @@
   -- 
-  Aula2- Cria-se primeiro a base do HTML, h1, img, p, e cria-se uma div para esssa primeira parte
+  Aula2- 
+Cria-se primeiro a base do HTML, nav, tag a, tag small, h1, img, p
+Cria-se o styles.css, reseta o CSS, estiliza, body, nav, cria a classe memory para a tag a pois
+todo o conteudo está na tag a, e a tag a está na tag nav, estiliza a classe memory aplicando display flex
+e flex collum
 
-  Aula3- Cria-se o styles.css, 
+explicação sobre grid layout
+agora cria-se a tag aside antes da tag nav
+exportar o logo em svg
+dentro do aside adicionar a tag img e adicionar o logo
+no body definir as regras de grid aplicando as linhas abaixo:
+	display: grid;
+	grid-template-areas: "profile timeline";
+	grid-template-columns: 1fr 1fr; 
+	grid-template-rows: 100vh
+agora é necessário definir qual elemento vai ser o profile e qual vai ser o timeline
+na tag nav adicionar
+	grid-area: timeline;
+na tag aside adicionar
+	grid-area: profile;
+em aside adicionar a tag img e adicionar a foto do perfil
+adicionar a  tag p com strong
+adicionar a tag span
+para os elementos ficar um em baixo do outro
+em aside
+	display: flex;
+	flex-direction: column;
+para centralizar os elementos
+	align-items: center;
+	justify-content: center;
+para adicionar a linha que divide os 2 conteudos
+	border-right: 1px solid;
+	border-image: linear-gradient(#727275, #2c2c31) 1;
+para dar espaçamento nos elementos, separar um pouco eles
+	gap: 20px;
+adicionar a imagem de fundo
+	background-image: url("./assets/background.svg");
+	background-position: top right;
+	background-repeat: no-repeat;
+	background-size: auto 100%
+formatar a imagem da minha foto
+	aside img:nth-child(2) {
+	    width: 160px;
+	    height: 160px;
+	    border-radius: 50%; /*deixa a img redonda*/
+	    border: 4px solid transparent;
+	    background: linear-gradient(#d39e33, #ed5636, #633bbc) padding-box, linear-gradient(260deg, #d39e33, #ed5636, #633bbc) border-box;
+
+	  }
+para estilizar a barra de rolagem
+	::-webkit-scrollbar {
+	  width: 8px;
+	}
+
+	::-webkit-scrollbar-track {
+	  background-color: #2c2c31;
+	}
+
+	::-webkit-scrollbar-thumb {
+	  background-color: #9e9ea0;
+	}
+adicionar o efeito de hover nas imgs
+cria-se uma div para as img 
+	.memory div {
+  	width: 100%;
+  	height: 280px;
+  	overflow: hidden;
+  	border-radius: 8px;
+	}
+aplica o hover
+	.memory:hover img {
+ 	 transform: scale(1.1);
+	}
+depois aplica o transitio em .memory img
+	transition: transform 0.3s ease-in-out;
+
+fazendo animações utilizando keyframes -- controla as etapas em uma sequência de animação CSS,
+definindo os estilos para quadros-chave(pontos chave)
+criando um keyframe
+	@keyframes entering {
+	  from {
+	    opacity: 0;
+	    transform: translateY(-200px);
+	  }
+	  to {
+	    opacity: 1;
+	    transform: translateY(0);
+	  }
+	}
+agora para adicionar o keyframe na nav
+	animation: entering 1s ease-in-out;
+e para adicionar em aside deve se chamar aside* pois só queremos que pegue os elementos
+	aside * {
+	  animation: entering 1s ease-in-out;
+	}
+
+layou responsivo
+	@media (max-width: 768px) {
+	  :root {
+	    font-size: 14px;
+	  }
+
+	  body {
+	    grid-template-columns: 1fr; /*fr=fração, tela só com uma parte não dividade em 2*/
+	    grid-template-rows: 0.2fr 0.8fr;/*20% e 80%*/
+	    grid-template-areas:
+	      "profile"
+	      "timeline";
+	  }
+	  aside {
+	    border-right: none;
+	    padding: 32px 12px;
+	  }
+	  nav {
+	    overflow-y: visible;
+	    padding: 22px;
+	  }
+
+	}
+	para criar o repositório via console no vscode
+git init 
+git add . (vai adicionar todos os arquivos)
+git commit -m "initial commit"
+	agora no git hub
+new repository
+repository name
+create repository
+no proprio repositório copiar a linha em ...or create a new repository on the command line
+linha -> git remote and origin .... colar no terminal e dar enter
+git push -u origin main
