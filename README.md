@@ -1,12 +1,12 @@
-# Página web responsiva para prática HTML & CSS
+  # Página web responsiva para prática HTML & CSS
 
-![preview](./.github/preview.png)
+  ![preview](./.github/spacetime.png)
 
-Projeto construido para praticar HTML e CSS
+  Projeto construido para praticar HTML e CSS
 
-[🔗 Clique aqui para acessar](https://henriqueapereira.github.io/NLW-spacetime-trilha-explorer/)
+  [🔗 Clique aqui para acessar](https://henriqueapereira.github.io/NLW-spacetime-trilha-explorer/)
 
-## 🛠️ Tecnologias
+  ## 🛠️ Tecnologias
 
 - HTML
 - CSS
